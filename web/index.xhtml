@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+   
+    <head>
+<title>WoJtK.com - You'll learn the name!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name = "keywords" content = "" />
+<meta name = "description" content = "" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1 user-scalable=no" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
+<link href="styles/main.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.smint.js"></script>
+<script>
+$(document).ready(function() {
+    $(".headerLink").click(function() {
+        var name = "#" + $(this).attr("id");
+        $('html, body').animate({
+				scrollTop: $(name + "Link").offset().top -50
+			}, 1000);
+    });
+    });
+
+$(document).ready(function() {
+    $('.subMenu').smint({
+    	'scrollSpeed' : 1000
+    });
+});
+
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 500) {
+        $('.subMenu').fadeIn();
+    } else {
+        $('.subMenu').fadeOut();
+    }
+});
+</script>
+
+</head>
+<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
+
+	<div class="wrap">
+
+	  <div class="subMenu" >
+	 	<div class="inner" id="mMenu">
+			<a href="#" id="sTop" class="subNavBtn">Home</a>
+			<a href="#" id="s1" class="subNavBtn">WoJtK</a>
+			<a href="#" id="s2" class="subNavBtn">The boss</a>
+			<a href="#" id="s3" class="subNavBtn">Arenankalkylator</a>
+			<a href="#" id="s4" class="subNavBtn">Portfolio</a>
+			<a href="#" id="s5" class="subNavBtn">Tales</a>
+			<a href="#" id="s6" class="subNavBtn end">Contact</a>
+		</div>		
+	</div>
+
+
+	<div class="section sTop">
+		<div id="topDiv">
+			<div class="logoDiv">
+				<h1 id="wojtk">WoJtK</h1>
+			</div>
+			<a href="#"><div class="headerLink" id="aboutWoJtK" style="width:310px; height:250px;">
+			<div class="decoDivText"><h1>WoJtK</h1><p>What we can do for you.</p></div>
+			<div class="decoDivColor"></div>
+			</div></a>
+                    <a href='#'><div class="headerLink" id="theBoss" style="width:280px; height:250px;">
+			<div class="decoDivText"><h1>The boss</h1><p>All hail the founder!</p></div>
+			<div class="decoDivColor"></div>
+			</div></a>
+			<a href='#'><div class="headerLink" id="arenankalkylator" style="width:500px; height:250px;">
+			<div class="decoDivText"><h1>Arenankalkylator</h1><p>Need to calculate your build? It's up to date!</p></div>
+			<div class="decoDivColor"></div>
+			</div></a>
+			<a href='#'><div class="headerLink" id="portfolio" style="width:450px; height:150px;">
+			<div class="decoDivText"><h1>Previous work</h1><p>Links, info and more.</p></div>
+			<div class="decoDivColor"></div>
+			</div></a>
+			<a href='#'><div class="headerLink" id="tales" style="width:340px; height:150px;">
+			<div class="decoDivText"><h1>Tales</h1><p>Once upon a time...</p></div>
+			<div class="decoDivColor"></div>
+			</div></a>
+			<a href='#'><div class="headerLink" style="width:300px; height:150px;">
+			<div class="decoDivText"><h1>Contact</h1><p>You found it. Lets talk!</p></div>
+			<div class="decoDivColor"></div>
+                            </div></a>
+		</div>
+		<br class="clear" />
+	</div>
+
+	<div class="section s1" id="aboutWoJtKLink">
+		<div class="inner">
+
+			<h1>WoJtK</h1>
+			<p>WoJtK, pronounced Woj tech, offers various services and solutions for IT.<br />
+				Among them:</p>
+			<ul>
+				<li>Publication of a website</li>
+				<li>Webdesign</li>
+				<li>Software solutions with JAVA</li>
+				<li>And more...</li>
+			</ul><br />
+				<p>Everything in an open and honest way.</p>
+		</div>
+	</div>
+
+	<div class="section s2" id="theBossLink">
+		<div class="inner">
+
+			<h1>The boss</h1>
+
+		</div>
+	</div>
+
+	<div class="section s3">
+		<div class="inner" id="arenankalkylatorLink">
+
+                    <a id="arenanKalkAnchor"></a><h1>Arenankalkylator</h1>
+                <div id="calc">
+                    <h:form>
+                        <table>
+                            <tr>
+                                <td>Grad:</td>
+                                <td><h:inputText value="#{arenanKalkylator.grad}"></h:inputText></td>
+                                <td>Poäng:</td>
+                                <td><h:outputText value="#{arenanKalkylator.poang}"></h:outputText>(<h:outputText value="#{arenanKalkylator.poangKvar}"></h:outputText>)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Ras:</td>
+                                <td>Alv</td>
+                                <td>Ung</td>
+                                <td>Vuxen</td>
+                                <td>Medel</td>
+                            </tr>
+                            <tr>
+                                <td><h2>Fysik</h2></td>
+                                <td><h:outputText value="#{arenanKalkylator.fysik}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.fysik}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.fysik}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.fysik}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Hälsa:</td>
+                                <td><h:inputText value="#{arenanKalkylator.health}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.health}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.health}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.health}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Uthållighet:</td>
+                                <td><h:inputText value="#{arenanKalkylator.uth}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.uth}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.uth}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.uth}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Skadebonus:</td>
+                                <td><h:inputText value="#{arenanKalkylator.sb}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.sb}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.sb}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.sb}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td><h2>Intelligens</h2></td>
+                                <td><h:outputText value="#{arenanKalkylator.intel}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.intel}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.intel}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.intel}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Inlärning:</td>
+                                <td><h:inputText value="#{arenanKalkylator.inl}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.inl}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.inl}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.inl}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Ledarskap:</td>
+                                <td><h:inputText value="#{arenanKalkylator.ls}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.ls}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.ls}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.ls}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Skarpsinne:</td>
+                                <td><h:inputText value="#{arenanKalkylator.ska}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.ska}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.ska}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.ska}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td><h2>Smidighet</h2></td>
+                                <td><h:outputText value="#{arenanKalkylator.smi}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.smi}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.smi}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.smi}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Undvika anfall:</td>
+                                <td><h:inputText value="#{arenanKalkylator.ua}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.ua}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.ua}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.ua}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Obeväpnad envig:</td>
+                                <td><h:inputText value="#{arenanKalkylator.oe}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.oe}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.oe}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.oe}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Initiativ:</td>
+                                <td><h:inputText value="#{arenanKalkylator.ini}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.ini}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.ini}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.ini}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Huggvapen:</td>
+                                <td><h:inputText value="#{arenanKalkylator.hugg}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.hugg}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.hugg}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.hugg}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Krossvapen:</td>
+                                <td><h:inputText value="#{arenanKalkylator.kross}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.kross}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.kross}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.kross}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Kättingvapen:</td>
+                                <td><h:inputText value="#{arenanKalkylator.katt}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.katt}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.katt}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.katt}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Sköld:</td>
+                                <td><h:inputText value="#{arenanKalkylator.skold}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.skold*arenanKalkylator.hugg}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.skold}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.skold}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td>Stickvapen:</td>
+                                <td><h:inputText value="#{arenanKalkylator.stick}"></h:inputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.stick}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.stick}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.stick}"></h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td><h:commandButton value="Submit" action="submit"></h:commandButton></td>
+                                <td>Totalpoäng:</td>
+                                <td><h:outputText value="#{arenanKalkylator.totUng}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.totVux}"></h:outputText></td>
+                                <td><h:outputText value="#{arenanKalkylator.totMed}"></h:outputText></td>
+                            </tr>
+                        </table>
+                    </h:form>
+                    <h:outputText value="#{arenanKalkylator.calculate}"></h:outputText>
+                </div>
+		</div>
+	</div>
+
+	<div class="section s4" id="portfolioLink">
+		<div class="inner">
+
+			<h1>Portfolio</h1>
+
+		</div>
+	</div>
+
+	<div class="section s5" id="talesLink">
+		<div class="inner">
+		
+		<h1>Tales</h1>
+		
+		</div>
+	</div>
+	<div class="section s6">
+		<div class="inner">
+		
+		<h1>Contact</h1>
+		
+		</div>
+	</div>
+</div>
+<script>
+$(".headerLink").hover(function(){
+    $(".decoDivColor", this).stop(true, false).animate({ height: "78px" }, 250);
+}, function() {
+    $(".decoDivColor", this).stop(true, false).animate({ height: "7px" }, 250);
+});
+</script>
+    
+</body>
+</html>
+
